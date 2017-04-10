@@ -7,11 +7,17 @@ body
 {
 	border: 1px solid black;
 	margin: 0 auto;
-	height: 600px;
-	width:  800px;
+	height: 200px;
+	width:  600px;
 }
 
 .heading1
 {
 	text-align: center;
+}
+
+#canvasWrapper
+{
+	width: 600px;
+	margin: 0 auto;
 }
