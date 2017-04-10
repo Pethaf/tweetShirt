@@ -10,12 +10,41 @@
 <H1 class="heading1">Design your own shirt</H1>
 <div id="canvasWrapper">
 <canvas id="canvas" width="600px" height="200px">
+Unfortunately your browser doesn't support the canvas element. 
 </canvas>
 </div>
 <form>
 <fieldset>
 	<legend>Pick your options</legend>
-	<input></input>
+	<p>
+	<label for="backgroundColor">Select your background color:</label>
+	<select name="backgroundColor">
+	<option value="white" selected="selected">White</option>
+	<option value="black">Black</option>
+	</select>
+	</p>
+	<p>
+	<label for="shape">Select background shape:</label>
+	<select name="shape">
+	<option value="circle" selected="selected">Circle</option>
+	<option value="square">Square</option>
+	</select>
+	</p>
+	<p>
+	<label for="foregroundColor">Select text color:</lable>
+	<select name="foregroundColor">
+		<option value="black" selected="selected">Black</option>
+		<option value="white"> White</option>
+	</select>
+	</p>
+	<p>
+	<label for="tweets">Pick a tweet:</label>
+	<select id="tweets">
+	</select>
+	</p>
+	<p>
+		<input type="button" id="previewButton" value="Preview">
+	</p>
 </fieldset>
 </form>
 </body>
