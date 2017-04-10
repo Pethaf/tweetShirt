@@ -24,20 +24,34 @@ function previewFunction()
 	console.log(shape);
 }
 
-function drawShape(numberOfShapes, shape, foregroundColor, backgroundColor)
+function drawSquare(numberOfShapes,canvas,context)
+	{
+		if(numberOfShapes != 0)
+		{
+			var randX = Math.round(canvas.width*Math.random());
+			var randY = Math.round(canvas.height*Math.random());
+			var w = Math.round(Math.random()*40);
+			context.fillStyle ="lightblue";
+			context.fillRect(randX,randY,w,w);
+			drawSquare(numberOfShapes-1,canvas,context);
+		}
+	}
+function drawShape(numberOfShapes, shape, foregroundColor, backgroundColor,context)
 {
-	var canvas = document.getElementById("canvas");
-	var painter = canvas.getContext("2d");
 	function drawSquare(numberOfShapes)
 	{
 		if(numberOfShapes != 0)
 		{
 			var randX = Math.round(canvas.width*Math.random());
 			var randY = Math.round(canvas.height*Math.random());
-			var rectWidth = 10;
-
+			var w = Math.round(Math.random()*40);
+			context.fillStyle ="lightblue";
+			context.fillRect(randX,randY,w,w);
+			drawSquare(numberOfShapes-1);
 		}
 	}
+	drawSquare(numberOfShapes);
+
 }
 function resetFunction()
 {
